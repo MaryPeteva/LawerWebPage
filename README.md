@@ -67,8 +67,6 @@ lawerWebPage/
 ## TODOs
 
 - [ ] Replace placeholder texts with real content
-- [ ] Fix broken links in footer (remove duplicate `##` and `/2//`)
-- [ ] Add proper metadata and favicons
 - [ ] Implement contact form handling
 - [ ] Add LICENSE file
 - [ ] Add proper image attribution

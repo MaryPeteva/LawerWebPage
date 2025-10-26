@@ -1,6 +1,10 @@
 @import url("../reset.css");
 
 /* === GLOBAL === */
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: #FFFAF0;
     font-family: 'Belgrano', serif;
@@ -8,7 +12,10 @@ body {
     font-size: 1.2em;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
+
 
 h1, h2, h3, p {
     margin: 0;
@@ -36,6 +43,7 @@ a:hover {
 header {
     background-color: #123524;
     color: #e2bc6f;
+    border-bottom: #e2bc6f 2px solid;
 }
 
 nav {
@@ -68,6 +76,10 @@ main {
     min-height: 55vh;
     color: #e2bc6f;
     padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /* expand main to fill remaining vertical space */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,18 +121,19 @@ main > * {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* === SERVICES & BLOG === */
+/* === SERVICES, BLOG, MNENIA, SERVICES === */
 .exmp,
 .blogPosts,
-.mnenia {
+.mnenia,
+.services {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
     padding: 2rem;
 }
-/* === BLOG SECTION === */
-.blog, .uslugi,.mnenia {
+
+.blog, .uslugi,.mnenia, .services {
     text-align: center;
     padding: 2rem 0;
 }
@@ -128,12 +141,12 @@ main > * {
 .blog h2, .uslugi h2, .mnenia h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #123524;
 }
 
 .exmp > div,
 .blogPosts > div,
-.mnenia > div {
+.mnenia > div,
+.services > div {
     flex: 1 1 300px;
     margin: 0.5em;
     padding: 1.5em;
@@ -144,17 +157,45 @@ main > * {
 }
 
 .exmp h3,
-.blogPosts h3
-.mnenia h3 {
+.blogPosts h3,
+.mnenia h3,
+.services h2 {
     text-decoration: underline;
     margin-bottom: 0.5em;
 }
 
 .exmp h3 a,
 .blogPosts h3 a,
-.mnenia h3 {
+.mnenia h3,
+.services h2 {
     text-decoration: underline;
     color: #d9a944;
+}
+
+/*====FAQ============*/
+.faq {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.faq>div{
+    margin: 1em;
+    padding: 1em;
+    max-width: 400px;
+    background-color: #fffaf0;
+    color: #123524;
+    cursor: pointer;
+}
+.faq p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq p.active {
+    max-height: 500px; /* достатъчна височина за текст */
 }
 
 /* === FOOTER === */
@@ -166,6 +207,9 @@ footer {
     gap: 2rem;
     padding: 2rem 4rem;
     text-align: left;
+    border-top: #e2bc6f 4px solid;
+    height: auto;
+    margin-top: auto;
 }
 
 footer h4 {
@@ -198,18 +242,8 @@ footer h4 {
     color: #e2bc6f;
     cursor: pointer;
 }
-.services{
-    padding: 1em;
-}
-.services>section{
-    margin: 1em;
-    padding: 1em;
-}
 
-.services>section>h2{
-    margin: 1em;
-}
-/* Mobile layout */
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 700px) {
     /* General scaling */
     body {
