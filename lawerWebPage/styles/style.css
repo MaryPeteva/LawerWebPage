@@ -7,6 +7,7 @@ html, body {
 
 body {
     background-color: #FFFAF0;
+    background: url("/lawerWebPage/img/Hero\ section.png") top/cover no-repeat;
     font-family: 'Belgrano', serif;
     color: #e2bc6f;
     font-size: 1.2em;
@@ -72,7 +73,7 @@ nav a:hover {
 /* === MAIN SECTION === */
 main {
     position: relative;
-    background: url("/lawerWebPage/img/back2.jpg") center/cover no-repeat;
+    
     min-height: 55vh;
     color: #e2bc6f;
     padding: 3rem 2rem;
@@ -83,19 +84,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-main::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(18, 53, 36, 0.45);
-    z-index: 0;
-}
-
-main > * {
-    position: relative;
-    z-index: 1;
 }
 
 .hero h1 {
@@ -110,6 +98,7 @@ main > * {
     gap: 2rem;
     flex-wrap: wrap;
     margin-top: 2rem;
+    justify-content: start;
 }
 
 .profilePic {
@@ -150,7 +139,6 @@ main > * {
     flex: 1 1 300px;
     margin: 0.5em;
     padding: 1.5em;
-    background: #fffaf0;
     color: #123524;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
