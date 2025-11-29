@@ -148,6 +148,7 @@ main {
     margin: 0.5em;
     padding: 1.5em;
     color: #123524;
+    background-color: rgba(240, 207, 122, 0.24);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
