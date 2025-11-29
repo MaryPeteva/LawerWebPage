@@ -101,6 +101,11 @@ main {
     justify-content: start;
 }
 
+.about>p,
+.hero>h1{
+    color: #123524;
+}
+
 .profilePic {
     width: 10em;
     height: 10em;
@@ -113,15 +118,19 @@ main {
 /* === SERVICES, BLOG, MNENIA, SERVICES === */
 .exmp,
 .blogPosts,
-.mnenia,
-.services {
+.mnenia {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
     padding: 2rem;
 }
-
+.services{
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start
+}
 .blog, .uslugi,.mnenia, .services {
     text-align: center;
     padding: 2rem 0;
@@ -134,8 +143,7 @@ main {
 
 .exmp > div,
 .blogPosts > div,
-.mnenia > div,
-.services > div {
+.mnenia > div{
     flex: 1 1 300px;
     margin: 0.5em;
     padding: 1.5em;
@@ -144,6 +152,18 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.services>div{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5em;
+    padding: 1.5em;
+    color: #123524;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 .exmp h3,
 .blogPosts h3,
 .mnenia h3,
@@ -192,7 +212,7 @@ footer {
     background-color: #123524;
     color: #e2bc6f;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     gap: 2rem;
     padding: 2rem 4rem;
     text-align: left;
@@ -200,7 +220,9 @@ footer {
     height: auto;
     margin-top: auto;
 }
+.foot{
 
+}
 footer h4 {
     color: #d9a944;
     margin-bottom: 0.5rem;
